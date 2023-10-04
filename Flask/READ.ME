@@ -1,1 +1,8 @@
+don't forget to forward your port to see the result
 
+kubectl port-forward <POD> 8000:8000
+
+http://localhost:8000/count
+
+if you want to change the content of the text.txt file, login to the container and simply use vim to make adjustments.
+Flask will pick up the changes
