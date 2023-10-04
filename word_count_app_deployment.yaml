@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: word-count-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: word-count
+  template:
+    metadata:
+      labels:
+        app: word-count
+    spec:
+      containers:
+      - name: word-count-container
+        image: qdk79/word_count_alt:v0.1
+        imagePullPolicy: Always
