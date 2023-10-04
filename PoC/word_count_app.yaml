@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: word-count-app
+spec:
+  restartPolicy: Never
+  containers:
+  - name: word-count-container
+    image: qdk79/word_count_app:v0.0.1
